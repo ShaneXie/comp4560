@@ -69,8 +69,8 @@ class Contact(models.Model):
     address_2 = models.TextField(blank=True)
     
     def __str__(self):
-        employer = self.employer.company_name
-        return ','.join([first_name,last_name,email,employer])        
+        #employer = self.employer.company_name
+        return ','.join([self.first_name,self.last_name,self.email])        
 
 
 
