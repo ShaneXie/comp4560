@@ -42,6 +42,13 @@ class Company(models.Model):
         return ','.join([self.company_name,self.city, '\n'+self.gerri_comments+'\n'])
 
 
+class Term(models.Model):
+    """docstring for Term"""
+    old_id = models.IntegerField(unique=True)
+    name = models.CharField(max_length=80)  
+
+    def __str__(self):
+        return self.name      
 
 
 class Contact(models.Model):
