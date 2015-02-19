@@ -42,6 +42,51 @@ class Company(models.Model):
         return ','.join([self.company_name,self.city, '\n'+self.gerri_comments+'\n'])
 
 
+class Term(models.Model):
+    """docstring for Term"""
+    old_id = models.IntegerField(unique=True)
+    name = models.CharField(max_length=80)  
+
+    def __str__(self):
+        return self.name      
+
+
+
+
+class Posting(models.Model):
+    """docstring fos Posting"""
+    old_id = models.IntegerField(unique=True)
+    hours_per_week = models.TextField(blank=True)
+    number = models.IntegerField()
+    remuneration = models.TextField(blank=True)
+    file_name = models.TextField()
+    comments = models.TextField(blank=True)
+    qualifications = models.TextField(blank=True)
+    website = models.TextField(blank=True)
+    coop_position = models.TextField()
+    contact_position = models.TextField(blank=True)
+    description = models.TextField(blank=True)
+    street = models.TextField(blank=True)
+
+    email = models.EmailField()
+    province = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
+    dept = models.CharField(max_length=200, blank=True)
+    #TODO these can be fk
+    contact_last = models.CharField(max_length=50)
+    contact_first = models.CharField(max_length=50)
+    postal_code = models.CharField(max_length=50)
+    phone = models.CharField(max_length=50, blank=True)
+    fax = models.CharField(max_length=50, blank=True)
+
+    work_term = models.ForeignKey(Term)
+
+class Placement(models.Model):
+    old_id = models.IntegerField(unique=True)
+    cetc_number = models.TextField(blank=True)
+    student = models.ForeignKey(Student)
+    posting = models.ForeignKey(Posting)
+    remuneration = models.TextField(blank=True)
 
 
 class Contact(models.Model):
