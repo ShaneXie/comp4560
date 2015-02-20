@@ -88,11 +88,9 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
+
 STATICFILES_DIRS = (
-    # Shane's Dev Static folder
-    "/home/anx/Documents/github/comp4560/coop_history/static",
-    # Add your Static folder
-    # "/home/pykun/4560/static",
+    os.path.join(BASE_DIR, 'static'),
 )
 
 
