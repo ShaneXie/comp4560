@@ -1,0 +1,72 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <title>UofM CS Coop history database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading metro ui -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/metro-bootstrap.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/metro-bootstrap-responsive.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/iconFont.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/site.css' %}" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/uofm.ico' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'img/uofm.ico' %}" />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+        <script src="{% static 'js/html5shiv.js' %}"></script>
+        <script src="{% static 'js/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
+  <body class="metro">
+      <header class="bg-dark">
+        <div class="navigation-bar dark">
+            <div class="navigation-bar-content container">
+                <a href="/" class="element"><span class="icon-database"></span> COOP HISTORY DATABASE</a>
+                <span class="element-divider"></span>
+
+                <a class="element1 pull-menu" href="#"></a>
+                <ul class="element-menu">
+                    <li>
+                        <a class="dropdown-toggle" href="#">DataTable</a>
+                        <ul class="dropdown-menu dark" data-role="dropdown">
+                            <li id="showStudentTable"><a href="#">Student</a></li>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Placement</a></li>
+                            <li><a href="#">Posting</a></li>
+                            <li><a href="#">Term</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <span class="element-divider place-right"></span>
+                <a title="Nuget.org" href="/admin" class="element place-right">COOP ADMIN</a>
+                <span class="element-divider place-right"></span>
+            </div>
+        </div>
+      </header><!-- End of Header-->
+
+      <div class="container">
+          <div id="mainDiv">
+              <div id="dtContainer" class="hide"></div>
+
+
+          </div>
+      </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.widget.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mousewheel.js' %}"></script>
+    <script src="{% static 'js/jquery.dataTables.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'js/metro.min.js' %}"></script>
+    <script src="{% static 'js/site.js' %}"></script>
+
+  </body>
+</html>

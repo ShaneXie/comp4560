@@ -1,0 +1,30 @@
+<table class="table striped hovered dataTable" id="dataTable">
+    <thead>
+        <tr>
+            <th class="text-left">Name</th>
+            <th class="text-left">Student No.</th>
+            <th class="text-left">Stream</th>
+            <th class="text-left">Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for st in students %}
+            <tr>
+                <td>{{ st.first_name }} {{ st.last_name }}</td>
+                <td>{{ st.student_number }}</td>
+                <td>{{ st.stream }}</td>
+                <td>{{ st.email }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th class="text-left">Name</th>
+            <th class="text-left">Student No.</th>
+            <th class="text-left">Stream</th>
+            <th class="text-left">Email</th>
+        </tr>
+    </tfoot>
+</table>

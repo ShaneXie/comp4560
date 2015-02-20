@@ -87,3 +87,16 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    # Shane's Dev Static folder
+    "/home/anx/Documents/github/comp4560/coop_history/static",
+    # Add your Static folder
+    # "/home/pykun/4560/static",
+)
+
+
+TEMPLATE_DIRS = (
+
+    os.path.join(BASE_DIR,  'templates'),
+)
