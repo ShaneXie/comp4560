@@ -1,0 +1,53 @@
+<h1 class="text-muted"><strong>Contact</strong></h1>
+<hr>
+<table class="table striped hovered dataTable" id="dataTable">
+    <thead>
+        <tr>
+            <th class="text-left">Name</th>
+            <th class="text-left">Email</th>
+            <th class="text-left">Phone</th>
+            <th class="text-left">Fax</th>
+            <th class="text-left">Cell</th>
+            <th class="text-left">Employer</th>
+            <th class="text-left">Dept</th>
+            <th class="text-left">Position</th>
+            <th class="text-left">City</th>
+            <th class="text-left">Address</th>
+            <th class="text-left">Postal code</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for ct in contacts %}
+            <tr>
+                <td>{{ ct.first_name }} {{ ct.last_name }}</td>
+                <td>{{ ct.email }}</td>
+                <td>{{ ct.phone }}</td>
+                <td>{{ ct.fax }}</td>
+                <td>{{ ct.cell }}</td>
+                <td>{{ ct.employer.company_name }}</td>
+                <td>{{ ct.dept }}</td>
+                <td>{{ ct.position }}</td>
+                <td>{{ ct.city }}</td>
+                <td>{{ ct.address_1 }} / {{ ct.address_2 }}</td>
+                <td>{{ ct.postal_code }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th class="text-left">Name</th>
+            <th class="text-left">Email</th>
+            <th class="text-left">Phone</th>
+            <th class="text-left">Fax</th>
+            <th class="text-left">Cell</th>
+            <th class="text-left">Employer</th>
+            <th class="text-left">Dept</th>
+            <th class="text-left">Position</th>
+            <th class="text-left">City</th>
+            <th class="text-left">Address</th>
+            <th class="text-left">Postal code</th>
+        </tr>
+    </tfoot>
+</table>
