@@ -1,0 +1,44 @@
+<h1 class="text-muted"><strong>Company</strong></h1>
+<hr>
+<table class="table striped hovered dataTable" id="dataTable">
+    <thead>
+        <tr>
+            <th class="text-left">Company Name</th>
+            <th class="text-left">City</th>
+            <th class="text-left">URL</th>
+            <th class="text-left">Gov. type</th>
+            {% comment %}
+            <th class="text-left">Linda Comments</th>
+            <th class="text-left">Gerri Comments</th>
+            {% endcomment %}
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for cpy in companies %}
+            <tr>
+                <td>{{ cpy.company_name }}</td>
+                <td>{{ cpy.city }}</td>
+                <td>{{ cpy.url }}</td>
+                <td>{{ cpy.government_type }}</td>
+                {% comment %}
+                <td>{{ cpy.linda_comments }}</td>
+                <td>{{ cpy.gerri_comments }}</td>
+                {% endcomment %}
+            </tr>
+        {% endfor %}
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th class="text-left">Company Name</th>
+            <th class="text-left">City</th>
+            <th class="text-left">URL</th>
+            <th class="text-left">Gov. type</th>
+            {% comment %}
+            <th class="text-left">Linda Comments</th>
+            <th class="text-left">Gerri Comments</th>
+            {% endcomment %}
+        </tr>
+    </tfoot>
+</table>

@@ -1,0 +1,41 @@
+<h1 class="text-muted"><strong>Placement</strong></h1>
+<hr>
+<table class="table striped hovered dataTable" id="dataTable">
+    <thead>
+        <tr>
+            <th class="text-left">Name</th>
+            <th class="text-left">Student No.</th>
+            <th class="text-left">Coop Position</th>
+            <th class="text-left">Contact Name</th>
+            <th class="text-left">City</th>
+            <th class="text-left">Work Term</th>
+            <th class="text-left">File name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for pmt in placements %}
+            <tr>
+                <td>{{ pmt.student.first_name }} {{ pmt.student.last_name }}</td>
+                <td>{{ pmt.student.student_number }}</td>
+                <td>{{ pmt.posting.coop_position }}</td>
+                <td>{{ pmt.posting.contact_first }} {{ pmt.posting.contact_last }}</td>
+                <td>{{ pmt.posting.city }}</td>
+                <td>{{ pmt.posting.work_term.name }}</td>
+                <td>{{ pmt.posting.file_name }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th class="text-left">Name</th>
+            <th class="text-left">Student No.</th>
+            <th class="text-left">Coop Position</th>
+            <th class="text-left">Contact Name</th>
+            <th class="text-left">City</th>
+            <th class="text-left">Work Term</th>
+            <th class="text-left">File name</th>
+        </tr>
+    </tfoot>
+</table>
