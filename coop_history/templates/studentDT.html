@@ -13,7 +13,18 @@
     <tbody>
         {% for st in students %}
             <tr>
-                <td>{{ st.first_name }} {{ st.last_name }}</td>
+                <td>
+                    <ul class="treeview stdTree" data-role="treeview">
+                        <li class="node collapsed">
+                            <a href="#"><span class="node-toggle"></span>{{ st.first_name }} {{ st.last_name }}</a>
+                            <ul>
+                                <li><a href="#">{{ st.student_number }}</a></li>
+                                <li><a href="#">{{ st.stream }}</a></li>
+                                <li><a href="#">{{ st.email }}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
                 <td>{{ st.student_number }}</td>
                 <td>{{ st.stream }}</td>
                 <td>{{ st.email }}</td>

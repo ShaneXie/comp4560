@@ -13,7 +13,11 @@ function showSpinner(){
 
 $('#showStudentTable').click(function () {
     showSpinner();
-    $('#dtContainer').load('ajax/getStudent',function(){$('#dataTable').dataTable();}).removeClass('hide');
+    $('#dtContainer').load('ajax/getStudent',function(){
+        $('#dataTable').dataTable().on( 'init.dt', function () {
+        console.log( 'Table initialisation complete: '+new Date().getTime() );
+    } );
+    }).removeClass('hide');
 });
 
 $('#showCompanyTable').click(function () {
